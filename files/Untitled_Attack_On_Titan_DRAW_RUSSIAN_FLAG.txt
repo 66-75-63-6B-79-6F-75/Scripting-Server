@@ -1,7 +1,0 @@
-local function fire(color)
-   game:GetService("Players").LocalPlayer.PlayerGui.FlareGui.LocalScript:WaitForChild("RemoteEvent"):FireServer(color)
-   return task.wait(1)
-end
-fire(Color3.fromRGB(255, 255, 255))
-fire(Color3.fromRGB(0, 0, 255))
-fire(Color3.fromRGB(255, 0, 0))
