@@ -1,0 +1,8 @@
+for i,v in pairs (game:GetService("Players"):GetPlayers()) do
+ pcall(function()
+local A_1 = "white"
+local A_2 = v.Character.infect
+local Event = game:GetService("ReplicatedStorage").byestamina
+Event:FireServer(A_1, A_2)
+end)
+end

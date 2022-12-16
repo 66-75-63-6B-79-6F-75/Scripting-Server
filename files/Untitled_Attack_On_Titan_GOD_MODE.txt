@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Character:WaitForChild("GettingGrabbed", 9e9):Destroy()

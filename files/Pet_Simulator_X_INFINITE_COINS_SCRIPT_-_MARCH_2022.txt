@@ -1,0 +1,7 @@
+local args = {
+[1] = "ChestCoin",
+[2] = "id78236",
+[3] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").Framework.Network.DestoryCoinServer:FireServer(unpack(args))

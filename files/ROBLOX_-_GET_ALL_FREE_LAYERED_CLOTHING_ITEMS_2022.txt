@@ -1,0 +1,30 @@
+const Cookie = '' //-- Insert your cookie here
+
+const LayeredClothing = [
+  1243478387, 1243478166, 1235118446, 1235118426, 1235118373, 1235118397, 1242724438, 1235118345, 1242724575, 1242724676
+];
+
+for (var i = 0; i < LayeredClothing.length; i++) {
+  const Response = fetch(
+    'https://economy.roblox.com/v1/purchases/products/' + LayeredClothing[i],
+    {
+      body: JSON.stringify({
+        expectedCurrency: 1,
+        expectedPrice: 0,
+        expectedSellerId: 1,
+      }),
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        ['Accept']: 'application/json',
+        ['Content-Type']: 'application/json',
+        ['Cookie']: '.ROBLOSECURITY=' + Cookie,
+        ['X-CSRF-TOKEN']: Roblox.XsrfToken.getToken()
+      },
+    }
+  );
+
+  if (Response.status !== 200) {
+    console.log('Successfully purchased ' + (1 + i) + ' assets!')
+  }
+}
