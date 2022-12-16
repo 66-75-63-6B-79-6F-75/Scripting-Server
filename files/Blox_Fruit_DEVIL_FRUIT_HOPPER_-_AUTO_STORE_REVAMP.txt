@@ -1,5 +1,0 @@
-getgenv().names = {"Spin Fruit", "Spike Fruit", "Chop Fruit"}
-getgenv().usewebhook = true
-getgenv().webhookurl = "" -- only use when using webhook
-getgenv().autostore = true
-loadstring(game:HttpGet('https://raw.githubusercontent.com/3bo3c0ewnj9hks/rororo/main/bro.lua'))()
