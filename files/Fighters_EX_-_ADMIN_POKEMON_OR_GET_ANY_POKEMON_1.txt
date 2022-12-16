@@ -1,0 +1,10 @@
+local args = {
+    [1] = "SpawnPokemon",
+    [2] = {
+        ["PokemonName"] = "Phantgolor",
+        ["Category"] = "9Specials"
+    },
+    [3] = 1
+}
+
+game:GetService("ReplicatedStorage").FUNCTION:InvokeServer(unpack(args))

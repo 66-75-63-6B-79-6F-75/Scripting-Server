@@ -1,0 +1,25 @@
+java.net.preferIPv4Stack=true
+Considering minecraft client jar
+Downloading minecraft client version 1.7.10
+  ETag: e6b7a531b95d0c172acb704d1f54d1b3
+  MD5:  e6b7a531b95d0c172acb704d1f54d1b3
+Considering library net.minecraftforge:forge:1.7.10-10.13.4.1614-1.7.10: Not Downloading {Wrong Side}
+Considering library net.minecraft:launchwrapper:1.12: Not Downloading {Wrong Side}
+Considering library org.ow2.asm:asm-all:5.0.3: Not Downloading {Wrong Side}
+Considering library com.typesafe.akka:akka-actor_2.11:2.3.3
+Considering library com.typesafe:config:1.2.1
+Considering library org.scala-lang:scala-actors-migration_2.11:1.1.0
+Considering library org.scala-lang:scala-compiler:2.11.1
+Considering library org.scala-lang.plugins:scala-continuations-library_2.11:1.0.2
+Considering library org.scala-lang.plugins:scala-continuations-plugin_2.11.1:1.0.2
+Considering library org.scala-lang:scala-library:2.11.1
+Considering library org.scala-lang:scala-parser-combinators_2.11:1.0.1
+Considering library org.scala-lang:scala-reflect:2.11.1
+Considering library org.scala-lang:scala-swing_2.11:1.0.1
+Considering library org.scala-lang:scala-xml_2.11:1.0.2
+Considering library lzma:lzma:0.0.1: Not Downloading {Wrong Side}
+Considering library net.sf.jopt-simple:jopt-simple:4.5: Not Downloading {Wrong Side}
+Considering library com.google.guava:guava:17.0: Not Downloading {Wrong Side}
+Considering library org.apache.commons:commons-lang3:3.3.2: Not Downloading {Wrong Side}
+Extracting: /forge-1.7.10-10.13.4.1614-1.7.10-universal.jar
+To:          C:\Users\celeb\AppData\Roaming\.minecraft\libraries\net\minecraftforge\forge\1.7.10-10.13.4.1614-1.7.10\forge-1.7.10-10.13.4.1614-1.7.10.jar

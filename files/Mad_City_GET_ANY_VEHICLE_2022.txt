@@ -1,0 +1,170 @@
+loadstring(game:HttpGet("https://pastebin.com/raw/Lqwb1b2i", true))() -- Tp bypass obfuscated becuase idk--
+wait(1)
+Instance.new("Vector3Value",game.Players.LocalPlayer).Name = "btp"
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/PpMcEF8z", true))()
+local example = library:CreateWindow({
+  text = "Mad city"
+})
+example:AddToggle("Anti Report", function(state)
+_G.re = (state and true or false)
+while _G.re == true do
+wait()
+pcall(function()
+for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do 
+    if v:IsA("Accessory") or v:IsA("BillboardGui") or v:IsA("Decal") or v:IsA("Shirt") or v:IsA("Pants") then 
+        v:Destroy()
+    end
+    end
+end)
+end
+end)
+example:AddLabel("Get Any Vehicle",function()
+end)
+example:AddBox("Vehicle Name", function(object, focus)
+  if focus then
+
+      local vehicle = tostring(object.Text)
+game:GetService("Workspace").ObjectSelection[vehicle].DriveSeat.Disabled = false
+game:GetService("Workspace").ObjectSelection[vehicle]:MoveTo(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").ObjectSelection[vehicle].DriveSeat.CFrame
+wait(2)
+game:GetService("Workspace").ObjectSelection[vehicle].DriveSeat.Disabled = true
+  end
+end)
+example:AddLabel("Get Any Vehicle v2",function()
+end)
+example:AddBox("Vehicle Name", function(object, focus)
+  if focus then
+
+      local vehicle = tostring(object.Text)
+game.Players.LocalPlayer.btp.Value=game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+wait(0.5)
+ game.Players.LocalPlayer.Character:MoveTo(game:GetService("Workspace").VehicleSpawns[vehicle].Pos.Position) 
+ wait(5)
+ game.Players.LocalPlayer.Character:MoveTo(game.Players.LocalPlayer.btp.Value)
+ wait(1)
+game:GetService("Workspace").ObjectSelection[vehicle].DriveSeat.Disabled = false
+game:GetService("Workspace").ObjectSelection[vehicle]:MoveTo(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").ObjectSelection[vehicle].DriveSeat.CFrame
+wait(2)
+game:GetService("Workspace").ObjectSelection[vehicle].DriveSeat.Disabled = true
+  end
+end)
+example:AddButton("Get Emotes",function()
+game.Players.LocalPlayer.UserId = 28995792
+end)
+example:AddButton("Walk Through Doors", function()
+for i,v in pairs(workspace:GetDescendants()) do
+    if v.Name == "Door" and v.ClassName == "Part" and v.CanCollide==true then
+        wait()
+        v.CanCollide = false
+   
+    end
+
+end
+end)
+example:AddButton("Tp to CrimeBase",function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game:GetService("Workspace").CrimBaseIgnore.Part.CFrame
+end)
+example:AddLabel("Tp to players",function()
+end)
+example:AddBox("Player", function(object, focus)
+  if focus then
+     _G.Player = tostring(object.Text)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[_G.Player].Character.HumanoidRootPart.CFrame
+     end
+end)
+ example:AddToggle("Loop Tp", function(state)
+     _G.loopp = (state and true or false)
+     while _G.loopp == true do
+    pcall(function()
+         wait(0.1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[_G.Player].Character.HumanoidRootPart.CFrame
+end)    
+ end
+     end)
+example:AddButton("Get ur vehicle", function()
+game:GetService("Workspace").ObjectSelection[game.Players.LocalPlayer.Name .."'s Vehicle"]:MoveTo(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+wait(0.5)
+game:GetService("Workspace").ObjectSelection[game.Players.LocalPlayer.Name .."'s Vehicle"].DriveSeat.Disabled = false
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").ObjectSelection[game.Players.LocalPlayer.Name .."'s Vehicle"].DriveSeat.CFrame
+end)
+example:AddToggle("Rob Stores", function(state)
+_G.Auto = (state and true or false)
+while _G.Auto == true do
+wait()
+pcall(function()
+for i,v in pairs(game:GetService("Workspace").ObjectSelection:GetDescendants()) do 
+if v.Name == "Cash" and v:IsA("MeshPart") or v.Name == "Steal" and v:IsA("Part") or v.Name == "SmashCash" and v:IsA("Part") or v.Name == "ATM" and v:IsA("Part") then
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame*CFrame.new(0,5,0)
+wait(0.5)
+v:FindFirstChildOfClass("Script").Event:FireServer()  
+end
+end
+end)
+end
+end)
+example:AddButton("Fix Stuck in vehicle", function()
+game:GetService("Workspace").ObjectSelection[game.Players.LocalPlayer.Name .."'s Vehicle"]:MoveTo(game.Players.LocalPlayer.Character.HumanoidRootPart.Position+Vector3.new(20,20,0))
+end)
+
+local example = library:CreateWindow({
+  text = "Mods"
+})
+example:AddButton("Missile Mod",function()
+for i,v in pairs(getgc(true)) do
+    if type(v) == "table" and rawget(v,"MissileLock") ~= nil then
+        wait()
+        v.MissileLock = 0
+        v.MissileCooldown = 0
+    end
+end
+end)
+example:AddLabel("Gun Stats Duper",function()
+end)
+example:AddBox("Gun Name", function(object, focus)
+  if focus then
+      _G.gun = tostring(object.Text)
+      end
+end)
+
+example:AddLabel("DUPE AMOUNT",function()
+end)
+example:AddBox("Dupe amount", function(object, focus)
+    if focus then
+        local amount = tonumber(object.Text)
+    for i = 1,amount do
+   local dupe = game.Players.LocalPlayer.Backpack[_G.gun]:FindFirstChildOfClass("LocalScript"):Clone()
+   dupe.Parent = game.Players.LocalPlayer.Backpack[_G.gun]
+    end
+end
+    end)
+example:AddToggle("Colorful Vehicle", function(state)
+_G.skins = (state and true or false)
+local skin = 0
+while _G.skins == true do
+local ohString1 = "EquipItem"
+if skin == 171 then
+    skin = 0
+    else
+    local lol = tostring("S"..skin)
+skin = skin+1
+
+game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer("EquipItem", lol)
+end
+end
+end)
+example:AddToggle("Inf Nitros", function(state)
+_G.Boost = (state and true or false)
+while _G.Boost == true do
+    wait()
+ pcall(function()
+game:GetService("Workspace").ObjectSelection[game.Players.LocalPlayer.Name.."'s Vehicle"].CarChassis.Boost.Value = 9e18
+end)
+end
+end)

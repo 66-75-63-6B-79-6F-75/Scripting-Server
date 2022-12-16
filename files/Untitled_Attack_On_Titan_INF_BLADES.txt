@@ -1,0 +1,9 @@
+local hook
+hook = hookmetamethod(game, "__namecall", function(...)
+   local Args = {...}
+   local method = getnamecallmethod()
+   if method:lower() == "fireserver" and Args[1].Name == "BladeDurEvent" then
+      return
+   end
+   return hook(...)
+end)

@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Character:WaitForChild("RemainingGas", 9e9):Destroy()
