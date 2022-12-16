@@ -1,7 +1,29 @@
 body {
     background-color: rgb(0, 0, 0);
-    color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    
+}
+p {
+    color: white;
+    margin: 0;
+    padding: 3;
+}
+h1 {
+    color: white;
+    margin: 0;
+    padding: 3;
+}
+a:link { /* Changes hyperlink color */
+    color: rgb(85, 230, 255);
+    text-decoration: none;
+}
+
+a:hover { /* Changes hyperlink color */
+    color: rgb(61, 170, 189);
+    text-decoration: none;
+}
+
+a:visited { /* Changes hyperlink color */
+    color: rgb(85, 230, 255);
+    text-decoration: none;
 }
