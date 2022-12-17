@@ -1,7 +1,6 @@
+--// this file is meant to be ran using a roblox executor
+
 local FileName = "admin.txt"
 
-local HttpService = game:GetService("HttpService")
-
-local Connection = HttpService:GetAsync()
-
-loadstring(game:HttpGet("http://localhost:4235/files/"..FileName))
+local loads = loadstring(game:HttpGet("http://127.0.0.1:4235/files/"..FileName))
+loads()
