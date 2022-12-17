@@ -23,3 +23,6 @@
 > 1. To add more scripts, add a file to the `/files/` directory and change the `FileName` variable in Script.lua to the script name.
 >
 > 2. Execute the lua file and it will be loaded.
+
+# Issue?
+<p1>Please open an Issue request.</p1>
