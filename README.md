@@ -12,8 +12,6 @@
 >
 > Click <a href="127.0.0.1:4235/files/">Here for the site.</a>
 
-<br></br>
-
 > For Linux users (Doubt) :
 >
 > Open Terminal and paste `pip install -r requirements.txt`
