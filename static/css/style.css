@@ -32,11 +32,11 @@ a:visited { /* Changes hyperlink color */
 
 ::-webkit-scrollbar {
     width: 3px;
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(25, 25, 25, 0.5);
 }
 
 ::-webkit-scrollbar-track {
-    color: rgba(25, 25, 25, 0.5);
+    color: rgb(25, 25, 25);
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
