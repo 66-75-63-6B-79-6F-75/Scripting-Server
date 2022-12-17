@@ -21,6 +21,7 @@ a:link { /* Changes hyperlink color */
 a:hover { /* Changes hyperlink color */
     color: rgb(61, 170, 189);
     text-decoration: none;
+    border-bottom: 5px red;
 }
 
 a:visited { /* Changes hyperlink color */
