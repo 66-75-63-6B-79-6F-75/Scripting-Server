@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap');
 
 body {
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(45, 45, 45);
     font-size: 16px;
     font-family: 'Roboto Mono', monospace;
 }
@@ -38,6 +38,4 @@ a:visited { /* Changes hyperlink color */
 ::-webkit-scrollbar-track {
     color: rgba(21, 21, 21);
     border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
 }
