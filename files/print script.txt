@@ -1,0 +1,4 @@
+local NewText = Instance.new("Hint")
+
+NewText.Parent = workspace
+NewText.Text = "Hello World! | Sent from the ngrok server"

@@ -1,20 +1,56 @@
 port = 4235
-doLog = False
+
+
 
 from flask import Flask, Response, url_for
 import logging
-import os
+from os import system, listdir, path
 from html import escape
+import subprocess
+from urllib.request import urlretrieve
+import zipfile
+from time import sleep
 
-if doLog == False:
+app = Flask(__name__, static_folder='static')
+system("title https://github.com/66-75-63-6B-79-6F-75")
+system("cls")
+
+print("Welcome to Scripting-Server. Would you like to port forward your server with Ngrok?")
+Forward = input("Port Forward? (y / n): ")
+
+if not Forward == "y" or not Forward == "n":
+       print("Please enter a value of 'y' or 'n' - Exiting in 3 seconds.")
+       sleep(3)
+       exit(1)
+
+if Forward.lower() == "n":
+    Log = input("Make logs? (y / n): ")
+    if not Log == "y" or not Log == "n":
+       print("Please enter a value of 'y' or 'n' - Exiting in 3 seconds.")
+       sleep(3)
+       exit(1)
+    print(f"\nThis Program will Port towards: 127.0.0.1:{port}\nUsing spaces in files are not fully supported.\nTo make files with spaces compatible, please use %20 where the spaces are in the file.\nSettings:\ndoLog = {Log}\nPort: {port}\n")
+elif Forward.lower() == "y":
+    UserAuth = input("Auth token: ")
+
+    print("Downloading Ngrok...")
+    if path.exists("ngrok.exe"):
+        print("Ngrok already is downloaded.")
+    else:
+        urlretrieve("https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip", "ngrok.zip")
+        print("Unzipping...")
+        with zipfile.ZipFile("ngrok.zip", 'r') as zip_ref:
+            zip_ref.extractall()
+        subprocess.run("del ngrok.zip")
+    print("Setting up server...")
+    subprocess.run(f"ngrok.exe authtoken {UserAuth}")
+    subprocess.Popen("ngrok.exe http 4235")
+
+
+if Log == False:
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.ERROR)
 
-app = Flask(__name__, static_folder='static')
-os.system("title https://github.com/66-75-63-6B-79-6F-75")
-os.system("cls")
-
-print(f"\nThis Program will Port towards: 127.0.0.1:{port}\nUsing spaces in files are not fully supported.\nTo make files with spaces compatible, please use %20 where the spaces are in the file.\nSettings:\ndoLog = {doLog}\nPort: {port}\n")
 def main():
     @app.route("/")
     def index():
@@ -39,7 +75,7 @@ def main():
 
     @app.route('/files/')
     def list_files():
-        files = os.listdir('files')
+        files = listdir('files')
         html = '''
             <html>
             <head>
