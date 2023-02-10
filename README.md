@@ -12,7 +12,7 @@
 >
 > Run the `Server.py`
 >
-> Click <a href="127.0.0.1:4235/files/">Here</a> for the site.
+> Click <a href="https://127.0.0.1:4235/files/">Here</a> for the site.
 
 <br>
 
