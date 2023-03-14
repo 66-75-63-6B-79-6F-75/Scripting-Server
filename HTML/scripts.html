@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripting - Server</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap');
+        body {
+            background-color: #0f0f0f;
+            color: #f3f3f3;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2rem;
+            background-color: #1f1f1f;
+        }
+
+        header {
+            font-size: 1.45rem;
+            font-weight: 100;
+        }
+
+        .scripts-label {
+            font-size: 1.25rem;
+            font-weight: 100;
+            margin: 0.25rem;
+            padding: 0;
+            margin-left: 0.5rem;
+        }
+
+        a {
+            color: #f3f3f3;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #f3f3f3;
+            text-decoration: underline;
+        }
+    </style>
+    
+    <div class="container-header">
+        <header>Scripting - Server</header>
+    </div>
+
+
+    <p class="scripts-label">Scripts:</p>
+    <ul>
+        {% for script in Scripts %}
+            <li><a href="../scripts/{{ script }}">{{ script }}</a></li>
+        {% endfor %}
+    </ul>     
+</body>
+</html>
